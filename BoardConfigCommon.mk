@@ -195,5 +195,8 @@ BOARD_HAL_STATIC_LIBRARIES := \
 # Increase coldboot timeout
 TARGET_INCREASES_COLDBOOT_TIMEOUT := true
 
+# PowerHAL
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
+
 # inherit from the proprietary version
 -include vendor/lge/g4-common/BoardConfigVendor.mk

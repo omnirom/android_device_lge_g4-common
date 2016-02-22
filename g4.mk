@@ -258,3 +258,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      libcnefeatureconfig \
      libxml2
+
+# TWRP
+PRODUCT_COPY_FILES += \
+    device/lge/g4-common/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab

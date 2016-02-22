@@ -118,10 +118,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Thermal
 PRODUCT_PACKAGES += \
     thermanager
@@ -256,8 +252,8 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-     libcnefeatureconfig \
-     libxml2
+    libxml2 \
+    libcnefeatureconfig
 
 # TWRP
 PRODUCT_COPY_FILES += \

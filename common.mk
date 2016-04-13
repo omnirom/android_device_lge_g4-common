@@ -192,7 +192,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
-    nfc_nci.pn54x.default \
+    nfc_nci.qcom \
     Tag
 
 # NFC access control + feature files + configuration

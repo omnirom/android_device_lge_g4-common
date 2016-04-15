@@ -38,6 +38,8 @@
 #define BOOST_SOCKET       "/dev/socket/pb"
 #endif
 
+#define DOUBLE_TAP_FILE "/sys/devices/virtual/input/lge_touch/tap2wake"
+
 static int client_sockfd;
 static struct sockaddr_un client_addr;
 static int last_state = -1;
@@ -205,6 +207,12 @@ static void power_hint(struct power_module *module, power_hint_t hint,
     }
 }
 
+void set_feature(struct power_module __unused *module, feature_t feature, int state) {
+    if (feature == POWER_FEATURE_DOUBLE_TAP_TO_WAKE) {
+        sysfs_write(DOUBLE_TAP_FILE, state ? "1" : "0");
+    }
+}
+
 static struct hw_module_methods_t power_module_methods = {
     .open = NULL,
 };
@@ -223,4 +231,5 @@ struct power_module HAL_MODULE_INFO_SYM = {
     .init = power_init,
     .setInteractive = power_set_interactive,
     .powerHint = power_hint,
+    .setFeature = set_feature,
 };

@@ -253,7 +253,8 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     libxml2 \
-    libcnefeatureconfig
+    libcnefeatureconfig \
+    librmnetctl
 
 # TWRP
 PRODUCT_COPY_FILES += \

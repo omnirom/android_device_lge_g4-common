@@ -195,5 +195,8 @@ BOARD_HAL_STATIC_LIBRARIES := \
 # Increase coldboot timeout
 TARGET_INCREASES_COLDBOOT_TIMEOUT := true
 
+# Sensors
+COMMON_GLOBAL_CFLAGS += -DBOARD_HAS_SENSORS_GROUP
+
 # inherit from the proprietary version
 -include vendor/lge/g4-common/BoardConfigVendor.mk

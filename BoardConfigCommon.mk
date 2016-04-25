@@ -192,5 +192,8 @@ BOARD_NFC_DEVICE := "/dev/pn547"
 BOARD_HAL_STATIC_LIBRARIES := \
     libhealthd.msm8992
 
+# Increase coldboot timeout
+TARGET_INCREASES_COLDBOOT_TIMEOUT := true
+
 # inherit from the proprietary version
 -include vendor/lge/g4-common/BoardConfigVendor.mk

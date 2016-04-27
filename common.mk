@@ -251,3 +251,6 @@ PRODUCT_PACKAGES += \
 # TWRP
 PRODUCT_COPY_FILES += \
     device/lge/g4-common/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=480

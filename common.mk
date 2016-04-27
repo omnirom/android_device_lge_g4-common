@@ -249,6 +249,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/g4-common/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=480
+
 #
 # System Properties for G4
 #
@@ -353,4 +356,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.qualcomm.sns.daemon=e \
     debug.qualcomm.sns.hal=e \
     debug.qualcomm.sns.libsensor1=e
-

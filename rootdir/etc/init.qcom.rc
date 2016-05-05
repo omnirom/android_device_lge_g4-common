@@ -99,12 +99,6 @@ on boot
 
     write /sys/bus/i2c/devices/2-0020/input/input0/update_fw 1
 
-    # bring cores online
-    write /sys/module/msm_thermal/core_control/enabled 0
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/module/msm_thermal/core_control/enabled 1
-
     # bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
@@ -948,10 +942,12 @@ service vm_bms /system/bin/vm_bms
     user root
     group root
 
-service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
-   class core
+service msm_irqbalance /system/bin/msm_irqbalance -f /system/etc/msm_irqbalance.conf
+    socket msm_irqbalance seqpacket 660 root system
+    class core
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 # init.qcom.usb.sh configure RNDIS to go through HW IPA
 service qcom-usb-sh /system/bin/sh /init.qcom.usb.sh

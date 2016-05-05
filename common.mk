@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml
 
+# MSM IRQ Balancer config
+PRODCUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
+
 # Sony timekeep
 PRODUCT_PACKAGES += \
     timekeep \

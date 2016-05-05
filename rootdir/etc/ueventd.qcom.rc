@@ -258,3 +258,8 @@
 
 # FRP
 /dev/block/bootdevice/by-name/persistent        0600    system  system
+
+ # Thermanager
+/sys/module/msm_performance/parameters/cpu_max_freq   0664 system system
+/sys/module/msm_performance/parameters/cpu_min_freq   0664 system system
+/sys/module/msm_performance/parameters/max_cpus       0664 system system

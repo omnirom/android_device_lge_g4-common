@@ -250,7 +250,7 @@ PRODUCT_COPY_FILES += \
     device/lge/g4-common/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=560
 
 #
 # System Properties for G4

@@ -249,6 +249,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/g4-common/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
+
+# Snapdragon Camera
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560
 

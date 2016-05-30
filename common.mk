@@ -203,24 +203,31 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
-# OMX
+# MM_AUDIO
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libdashplayer \
-    libdivxdrmdecrypt \
-    libextmedia_jni \
+    libOmxAacDec \
     libOmxAacEnc \
     libOmxAmrEnc \
-    libOmxCore \
     libOmxEvrcEnc \
+    libOmxMp3Dec \
     libOmxQcelp13Enc \
-    libOmxSwVencMpeg4 \
+    libOmxAc3HwDec \
+    libstagefright_soft_flacdec
+
+# MM_CORE
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxCore
+
+# MM_VIDEO
+PRODUCT_PACKAGES += \
+    libdivxdrmdecrypt \
     libOmxVdec \
     libOmxVdecHevc \
+    libOmxVdpp \
     libOmxVenc \
-    libOmxVidcCommon \
-    libstagefrighthw \
-    libstagefright_soft_flacdec
+    libOmxVidEnc \
+    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \

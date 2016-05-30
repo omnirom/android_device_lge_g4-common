@@ -205,22 +205,23 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+ # OMX
+ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libdashplayer \
-    libdivxdrmdecrypt \
-    libextmedia_jni \
+    libqdMetaData \
+    libOmxAacDec \
     libOmxAacEnc \
     libOmxAmrEnc \
+    libOmxMp3Dec \
+    libmm-omxcore \
     libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
-    libOmxSwVencMpeg4 \
+    libdivxdrmdecrypt \
     libOmxVdec \
     libOmxVdecHevc \
     libOmxVenc \
-    libOmxVidcCommon \
-    libstagefrighthw \
-    libstagefright_soft_flacdec
+    libOmxVidEnc \
+    libOmxVidCommon \
+    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \
